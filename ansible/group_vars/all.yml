@@ -21,6 +21,7 @@ rhbase_admin_ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDPfUrrv3mde/PyDRPyCa
 rhbase_users:
   - name: ebu
     comment: 'Ebu Bekir Tinastepe'
+    password: $6$DDjLVsvX0vW7hFmr$RWQ5BeChdYcEefCJvhdXo53qPfKK/3lVhH7S4R67jgI5TxLULfjnTqt9Imd30YyiOdpomoCU9qg6VQgfcI.Lc0
     groups:
       - users
       - wheel
