@@ -3,18 +3,18 @@
 ---
 rhbase_motd: true
 rhbase_repositories:
- - epel-release
+  - epel-release
 rhbase_install_packages:
- - bash-completion
- - bind-utils
- - vim-enhanced
- - git
- - nano
- - tree
- - wget
+  - bash-completion
+  - bind-utils
+  - vim-enhanced
+  - git
+  - nano
+  - tree
+  - wget
 rhbase_firewall_allow_services:
- - http
- - https
+  - http
+  - https
 rhbase_admin_user: ebu
 rhbase_admin_ssh_key: MIIEpAIBAAKCAQEAumSNvVIhfRfwqGV8bxajonEpXl6V5DCgTvzwdS28f5Kx2Rml
 yzIoFPTDA+dMfgAXdT7BeMGqP+oDm091W7bsxxoUM5cDnwuBeYsRUS3454Rpu8Yj
