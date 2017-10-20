@@ -1,7 +1,7 @@
 # Cheat sheets and checklists
 
-- Student name: NAME
-- Github repo: URL
+- Student name: Ebu Bekir Tinastepe
+- Github repo: https://github.com/EbuTinastepe/elnx-sme
 
 ## Basic commands
 
@@ -24,7 +24,7 @@ Simple workflow for a personal project without other contributors:
 | Installeren van een server                   |  'vagrant up'      |
 | Status vagrant                               |  'vagrant status'      |
 | rsh key aanmaken                             |  'ssh-keygen -t rsa'      |
-| Verderzetten                                 |  'vagrant provision server'|
+| Server updaten                               |  'vagrant provision server'|
 | Inloggen op server                           |  'vagrant ssh server'      |
 |                                              |  'sudo /vagrant/test/runbats.sh' |
 
@@ -34,4 +34,3 @@ Simple workflow for a personal project without other contributors:
 1. Is the IP-adress correct? `ip a`
 2. Is the router/default gateway correct? `ip r -n`
 3. Is a DNS-server available? `cat /etc/resolv.conf`
-
