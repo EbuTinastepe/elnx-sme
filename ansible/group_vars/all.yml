@@ -1,3 +1,49 @@
 # group_vars/all.yml
 # Variables visible to all nodes
 ---
+rhbase_motd: true
+rhbase_repositories:
+ - epel-release
+rhbase_install_packages:
+ - bash-completion
+ - bind-utils
+ - vim-enhanced
+ - git
+ - nano
+ - tree
+ - wget
+rhbase_firewall_allow_services:
+ - http
+ - https
+rhbase_admin_user: ebu
+rhbase_admin_ssh_key: MIIEpAIBAAKCAQEAumSNvVIhfRfwqGV8bxajonEpXl6V5DCgTvzwdS28f5Kx2Rml
+yzIoFPTDA+dMfgAXdT7BeMGqP+oDm091W7bsxxoUM5cDnwuBeYsRUS3454Rpu8Yj
+IgEjJKl/oArLHPgbsGkl9F2zrtELE8FFpEFX7xGmDQOigNBU6hW7emYttk0rh8Gs
+hffZQaixYBujUDqaYHCzmJhplKoFS01rFJ8a9HprLuKlqdi3E2Vp7m9LP+ns3DwF
+xUmHOlGZDYNu24PIrrX3VFhnOaUKPiBc98wcjGle8LxngbeOy9/yIJMq2VX2q3EP
+9yvjS0wq2Njrn2MwLKPyNz0pgwVcXqLS72U84wIDAQABAoIBAGednm2wSo2P0WjL
+gfD/VNfosGaVjh3cKkG+uq1pT3BbzCIz78aVi1Ka/g4ddphU1LWIvWSzxEDjhj3A
+Xi0t81J7XN+RA6JWcxNuC6JlPAj3ww9vhfhRSYgH8bq2RVNFWZ8n1MGTlV+JNe81
+cdFtwcRUu0pgyuVw6sN2cVIJmz/LkzOuKfBXZWQZJQbp6+T0bTOcGVmwjJkxWrNi
+Zl6MKoRztaUO1S0q9/BuuuN28lSn6fr/T/8t/F9e0pqIxLljajsmX+ewQwFjraeh
+e9tK4sxrPnsVpGd2RRTzF/i1o7eaRnNwUxPKjPWI75KO/63ZMKcTyZVyQeozfj96
+Hur2CwECgYEA505UCFV4+2bP6x+q7jRV4wenmm1xf96PF1maZmREyIulBlTWNIz4
+KGWBm3qT18XDuUeWBtNYwhpQ4wqG1QYtLoFq+6LwSwmElQkWr4zGwAjKPFpdXpS/
++G0EuycEtHnHZNTIfnn9Bs+VM2GmzBwSt1fS476nv9mHOCU7clhdA1kCgYEAzkq7
+kjYbjUZzhkeH2RgRj2DQpwNIX1sNaSHzmKNn3LFABI0drxbOFUnk2eelVQo183nT
+OjSf9w/YyPJEcrFqltBsLzLsXQw3EA3rL0u36VX9RhIDhYRVYI0BzKWWzqYtG5Rj
+8Ol370IcHdXe6QHYvvwirNFudfESYCC5H8udJpsCgYEAgQVEAlIK5dB3caN8aNpw
+fe6rIoyhnr25+0BTy4FqjKK4LkvsH+vyEDZukRdSmC0L+7FekfgZrkuXis04YGLN
+mP8/eZVti62HcspbCRjxU/STOg79veAjJKNK3Enrae/ztN6r50CMTtxDUSHLNFcE
+aZhnXfnfADiKIFtESYfYeiECgYAYZeBPR5T0nXt2Syl29JDHG1UyG4JIvNUWNQzB
+ZboX8OK4ZxQ2rATNocKuPuZf62g8FpFz1duBdd9WzMhppDAODDJvVp971cEBZhQF
+sPfcYe4lhmXiOad7VtH6qS7v29mD5IX5bTNhGbmHkc7eUfiXhex38gEVc+CPe+9J
+ImTAtwKBgQCvkWVG6rxkeQ1HIEE0y+OL1rAqEFXS8AsgmbpZva282LwrTm9EsXlD
+p46pqWt+aSCBuQPta1hv1RFbpFHLffY/O4E7ua9osTcu5BaJIWOGqYKQ4SheRax0
+3zzXc0n4wwx0QBEEpp546TSyVnvpUGHCuIIgyLA2/vodJCXvyU4f6A==
+rhbase_users:
+  - name: ebu
+    comment: 'Ebu Bekir Tinastepe'
+    groups:
+      - users
+      - wheel
