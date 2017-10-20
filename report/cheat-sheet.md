@@ -21,6 +21,14 @@ Simple workflow for a personal project without other contributors:
 | Push local changes to remote repository      | `git push`                |
 | Pull changes from remote repository to local | `git pull`                |
 
+| Installeren van een server                   |  'vagrant up'      |
+| Status vagrant                               |  'vagrant status'      |
+| rsh key aanmaken                             |  'ssh-keygen -t rsa'      |
+| Verderzetten                                 |  'vagrant provision server'|
+| Inloggen op server                           |  'vagrant ssh server'      |
+|                                              |  'sudo /vagrant/test/runbats.sh' |
+
+
 ## Checklist network configuration
 
 1. Is the IP-adress correct? `ip a`
