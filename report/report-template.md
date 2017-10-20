@@ -1,9 +1,13 @@
 # Enterprise Linux Lab Report
 
-- Student name: 
-- Github repo: <https://github.com/HoGentTIN/elnx-USER.git>
+- Student name: Ebu Bekir Tinastepe
+- Github repo: https://github.com/EbuTinastepe/elnx-sme
 
-Describe the goals of the current iteration/assignment in a short sentence.
+1. Code ophalen uit GitHub en server installeren op VirtualBox met "vagrant up"
+2. Rollen downloaden via Ansible en installeren op de server met de "vagrant provision"
+3. Testplan uitvoeren
+4. Testrapport uitschrijven
+
 
 ## Test plan
 
