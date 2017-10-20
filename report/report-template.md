@@ -4,7 +4,7 @@
 - Github repo: https://github.com/EbuTinastepe/elnx-sme
 
 1. Code ophalen uit GitHub en server installeren op VirtualBox met "vagrant up"
-2. Rollen downloaden via Ansible en installeren op de server met de "vagrant provision"
+2. bertvv.rh-base downloaden via Ansible en installeren op de server met de "vagrant provision"
 3. Testplan uitvoeren
 4. Testrapport uitschrijven
 
