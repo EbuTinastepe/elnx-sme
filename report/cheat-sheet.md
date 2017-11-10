@@ -21,13 +21,15 @@ Simple workflow for a personal project without other contributors:
 | Push local changes to remote repository      | `git push`                |
 | Pull changes from remote repository to local | `git pull`                |
 
+
 | Installeren van een server                   |  'vagrant up'      |
 | Status vagrant                               |  'vagrant status'      |
+| Herladen server                              |  'vagrant reload' |
 | rsh key aanmaken                             |  'ssh-keygen -t rsa'      |
-| Server updaten                               |  'vagrant provision server'|
-| Inloggen op server                           |  'vagrant ssh server'      |
-|                                              |  'sudo /vagrant/test/runbats.sh' |
-
+| Server updaten met wijzigingen               |  'vagrant provision SERVER'|
+| Inloggen op server                           |  'vagrant ssh SERVER'      |
+| Shell-script runnen (testen)                 |  'sudo /vagrant/test/runbats.sh' |
+| Een base installeren (Ansible)               |  'ansible-galaxy install SERVER' |
 
 ## Checklist network configuration
 
