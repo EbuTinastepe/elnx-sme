@@ -13,3 +13,7 @@ mariadb_users:
     priv: '*.*:ALL,GRANT'
 
 mariadb_root_password: M@riaRoot
+
+wordpress_database: wordpressdb
+wordpress_user: ebutinastepe
+wordpress_password: Wordpress
