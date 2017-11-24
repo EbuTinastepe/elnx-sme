@@ -52,9 +52,90 @@ wordpress_user: ebutinastepe
 wordpress_password: Wordpress
 ```
 
+4. Certificaat aanmaken voor de server. Volgende commando's uitvoeren in GitBash:
+
+```
+openssl genrsa -out device.key 2048
+
+openssl req -new -key device.key -out device.csr
+
+openssl x509 -req -days 365 -in pu004.csr -signkey pu004.key -out pu004.crt
+```
+
+Nadat de certificaten zijn aangemaakt, deze in een folder (file-cert) stoppen in map ansible.
+
+5. pu004.yml en site.yml aanpassen.
+
+-pu004.yml (toevoeging)
+
+```
+httpd_SSLCertificateFile: /etc/pki/tls/certs/ca.crt
+httpd_SSLCertificateKeyFile: /etc/pki/tls/private/ca.key
+```
+- site.yml (toevoeging)
+```
+  pre_tasks:
+    - name: Webserver private key kopieren
+      copy:
+        src: certificaten/device.key
+        dest: /etc/pki/tls/private/ca.key
+    - name: Web server certificaat kopieren
+      copy:
+        src: certificaten/device.crt
+        dest: /etc/pki/tls/certs/ca.crt
+```
+
+6. Als laatst passen we testfile van pu004 aan naar de zelfgegeven user en passwoorden.
+
+```
+#{{{ Variables
+sut=192.0.2.50
+mariadb_root_password=M@riaRoot
+wordpress_database=wordpressdb
+wordpress_user=ebutinastepe
+wordpress_password=M@ria
+```
+
 ## Test report
 
-The test report is a transcript of the execution of the test plan, with the actual results. Significant problems you encountered should also be mentioned here, as well as any solutions you found. The test report should clearly prove that you have met the requirements.
+Na het uitvoeren van de test commando zien we dat alle testen slagen.
+```
+[vagrant@pu004 ~]$ sudo /vagrant/test/runbats.sh
+Running test /vagrant/test/common.bats
+ ✓ EPEL repository should be available
+ ✓ Bash-completion should have been installed
+ ✓ bind-utils should have been installed
+ ✓ Git should have been installed
+ ✓ Nano should have been installed
+ ✓ Tree should have been installed
+ ✓ Vim-enhanced should have been installed
+ ✓ Wget should have been installed
+ ✓ Admin user ebu should exist
+ ✓ Custom /etc/motd should have been installed
+
+10 tests, 0 failures
+Running test /vagrant/test/pu004/lamp.bats
+ ✓ The necessary packages should be installed
+ ✓ The Apache service should be running
+ ✓ The Apache service should be started at boot
+ ✓ The MariaDB service should be running
+ ✓ The MariaDB service should be started at boot
+ ✓ The SELinux status should be ‘enforcing’
+ ✓ Web traffic should pass through the firewall
+ ✓ Mariadb should have a database for Wordpress
+ ✓ The MariaDB user should have "write access" to the database
+ ✓ The website should be accessible through HTTP
+ ✓ The website should be accessible through HTTPS
+ ✓ The certificate should not be the default one
+ ✓ The Wordpress install page should be visible under http://192.0.2.50/wordpress/
+ ✓ MariaDB should not have a test database
+ ✓ MariaDB should not have anonymous users
+
+15 tests, 0 failures
+
+
+15 tests, 0 failures
+```
 
 ## Resources
 
