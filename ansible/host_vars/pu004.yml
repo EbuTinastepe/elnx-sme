@@ -16,4 +16,8 @@ mariadb_root_password: M@riaRoot
 
 wordpress_database: wordpressdb
 wordpress_user: ebutinastepe
-wordpress_password: Wordpress
+wordpress_password: M@ria
+
+#Certificaten
+httpd_SSLCertificateFile: /etc/pki/tls/certs/ca.crt
+httpd_SSLCertificateKeyFile: /etc/pki/tls/private/ca.key
