@@ -29,7 +29,6 @@ Simple workflow for a personal project without other contributors:
 | Server updaten met wijzigingen               |  'vagrant provision SERVER'|
 | Inloggen op server                           |  'vagrant ssh SERVER'      |
 | Shell-script runnen (testen)                 |  'sudo /vagrant/test/runbats.sh' |
-| Een base installeren (Ansible)               |  'ansible-galaxy install SERVER' |
 | Installeren van een base (Ansible)           |  'ansible-galaxy install BASE' |
 
 ## Checklist network configuration
