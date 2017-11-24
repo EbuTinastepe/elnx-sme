@@ -3,21 +3,54 @@
 - Student name: Ebu Bekir Tinastepe
 - Github repo: https://github.com/EbuTinastepe/elnx-sme
 
-1. Code ophalen uit GitHub en server installeren op VirtualBox met "vagrant up"
-2. bertvv.rh-base downloaden via Ansible en installeren op de server met de "vagrant provision"
-3. Testplan uitvoeren
-4. Testrapport uitschrijven
-
+De volgende rollen downloaden.
+  - bertvv.httpd
+  - bertvv.mariadb
+  - bertvv.wordpress
 
 ## Test plan
 
-How are you going to verify that the requirements are met? The test plan is a detailed checklist of actions to take, including the expected result for each action, in order to prove your system meets the requirements. Part of this is running the automated tests, but it is not always possible to validate *all* requirements throught these tests.
-
 ## Procedure/Documentation
 
-Describe *in detail* how you completed the assignment, with main focus on the "manual" work. It is of course not necessary to copy/paste your code in this document, but you can refer to it with a hyperlink.
+1. Rollen installeren: bertvv.httpd, bertvv.mariadb en bertvv.wordpress.
+Hiermee wordt Apache webserver en MariaDB geïnstalleerd op de server.
 
-Make sure to write clean Markdown code, so your report looks good and is clearly structured on Github.
+2. Voeg de volgende code bij roles toe in site.yml:
+
+```
+# site.yml
+---
+- hosts: pu004
+  become: true
+  roles:
+    - bertvv.rh-base
+    - bertvv.httpd
+    - bertvv.mariadb
+    - bertvv.wordpress
+```
+
+3. Daarna moet men in het mapje host_vars een bestand pu004.yml aanmaken. En voegen we volgende code toe.
+
+```
+# puOO4.yml
+rhbase_firewall_allow_services:
+    - http
+    - https
+
+mariadb_databases:
+  - name: wordpressdb
+
+mariadb_users:
+  - name: ebutinastepe
+    password: M@ria
+    priv: '*.*:ALL,GRANT'
+
+mariadb_root_password: M@riaRoot
+
+wordpress_database: wordpressdb
+wordpress_user: ebutinastepe
+wordpress_password: Wordpress
+```
 
 ## Test report
 
@@ -25,4 +58,11 @@ The test report is a transcript of the execution of the test plan, with the actu
 
 ## Resources
 
-List all sources of useful information that you encountered while completing this assignment: books, manuals, HOWTO's, blog posts, etc.
+- https://galaxy.ansible.com/bertvv/httpd/
+- https://galaxy.ansible.com/bertvv/mariadb/
+- https://galaxy.ansible.com/bertvv/wordpress/
+- https://github.com/bertvv/lampstack
+- https://github.com/bertvv/ansible-role-httpd
+- https://github.com/bertvv/ansible-role-mariadb
+- https://github.com/bertvv/ansible-role-wordpress
+- https://datacenteroverlords.com/2012/03/01/creating-your-own-ssl-certificate-authority/
