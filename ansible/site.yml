@@ -17,7 +17,12 @@
         src: file-cert/pu004.crt
         dest: /etc/pki/tls/certs/ca.crt
 - hosts: pu001
-  sudo: true
+  become: true
+  roles:
+    - bertvv.rh-base
+    - bertvv.bind
+- hosts: pu002
+  become: true
   roles:
     - bertvv.rh-base
     - bertvv.bind
