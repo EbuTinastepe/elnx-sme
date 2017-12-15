@@ -26,10 +26,11 @@ Simple workflow for a personal project without other contributors:
 | Status vagrant                               |  'vagrant status'      |
 | Herladen server                              |  'vagrant reload' |
 | rsh key aanmaken                             |  'ssh-keygen -t rsa'      |
-| Server updaten met wijzigingen               |  'vagrant provision SERVER'|
-| Inloggen op server                           |  'vagrant ssh SERVER'      |
+| Server updaten met wijzigingen               |  'vagrant provision HOST'|
+| Inloggen op server                           |  'vagrant ssh HOST'      |
 | Shell-script runnen (testen)                 |  'sudo /vagrant/test/runbats.sh' |
 | Installeren van een base (Ansible)           |  'ansible-galaxy install BASE' |
+| Commando als vagrant ssh niet werkt          |  'vagrant_prefer_system_bin=1 vagrant ssh HOST' |
 
 ## Checklist network configuration
 
