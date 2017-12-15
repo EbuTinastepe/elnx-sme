@@ -26,3 +26,9 @@
   roles:
     - bertvv.rh-base
     - bertvv.bind
+- hosts: pr011
+  become: true
+  roles:
+    - bertvv.rh-base
+    - bertvv.samba
+    - bertvv.vsftpd
