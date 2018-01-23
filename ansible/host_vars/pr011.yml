@@ -1,1 +1,173 @@
 # pr011.yml
+
+rhbase_firewall_allow_services:
+  - samba
+  - ftp
+
+samba_workgroup: avalon
+
+samba_netbios_name: files
+
+samba_load_printers:
+  - false
+
+rhbase_user_groups:
+  - management
+  - technical
+  - sales
+  - it
+
+samba_shares:
+  - name: public
+    comment: ''
+    public: yes
+    write_list: +users
+    valid_users: +users
+    setype: samba_share_t
+  - name: management
+    comment: ''
+    write_list: +management
+    valid_users: +management
+    group: management
+    directory_mode: "0770"
+  - name: sales
+    comment: ''
+    write_list: +sales
+    valid_users: +sales,+management
+    group: sales
+    directory_mode: '0770'
+  - name: technical
+    comment: ''
+    write_list: +technical
+    valid_users: +technical,+management,+sales,+it
+    group: technical
+  - name: it
+    comment: ''
+    write_list: +it
+    valid_users: +it,+management
+    group: it
+    directory_mode: '0770'
+
+rhbase_users:
+  - name: stevenh
+    comment: 'Steven Hermans'
+    groups:
+      - management
+      - users
+    password: $6$c3IUOUKugIlxjhZk$9X7HdrhOkeYwibylNXtUJKEOX9Ce85bYM37BDO4l/75kSsRxFp4IkCxK/vAc4L6JnxI.YQSuhkPwdrZxCu9Tb.
+  - name: stevenv
+    comment: 'Steven Van Daele'
+    groups:
+      - technical
+      - users
+    password: $6$HRAt2lay5pQyOJz4$EMmALxNr6VCANxYMrKj8rHU2gmYdhuuYkVPeOSDjc9RTHHOskd0f2VSW7d34l6OtAklCudy1IRki8azAfXG1u1
+  - name: leend
+    comment: 'Leen De Meester'
+    groups:
+      - technical
+      - users
+    password: $6$e5LrBh112E09OLDF$K8kRTaF0uOZ5INrO5pm4xBg4bL0c4hJtFGA/wfp/aDC3htT.E6eIS6oYFGkwZAmpGqrH.NRGcKlpPh/V2HudU.
+  - name: svena
+    comment: 'Sven Aerens'
+    groups:
+      - sales
+      - users
+    password: $6$2Bvo9sF/xViBlKxk$z9Fvcul7u/w4voqxZZB342oAZq1MYbwWsiV9h5mQj41wLWnsqTXiZ4ay3BW9ALmRx0xWfh.cujojHwktbssMd0
+  - name: nehirb
+    comment: 'Nehir Baayar'
+    groups:
+      - it
+      - users
+    password: $6$jkO32ewphyj8/L0A$kzmKFHVzMDR5UYeuM8zpZndWm4E5rvwTQK7jkUBym3A5O.Yod7orqCQ0PTHtV87ruLK5SJlMTLAv8YhyK3xSl/
+  - name: alexanderd
+    comment: 'Alexander De Coninck'
+    groups:
+      - technical
+      - users
+    password: $6$pSy88CzVSZGQYXMW$yar3wMcU3pRIT6CNUcqTRtxSOsgD1287EymdM9vDTec8YFPivtrDm0.lGGm9vZJEOcVrGsR.RA0DAyksIVQSJ0
+  - name: krisv
+    comment: 'Kris Vanhavrbeke'
+    groups:
+      - management
+      - users
+    password: $6$aq0H5KJamifRAzdf$4r0lRutmUZaBKxYxxL5DLc0Owfu1bpDJq/NEQbyd/zlGdp7LipNweHVXi9Mt9CCi098xvHN/kxYo13VsqffTJ/
+  - name: benoitp
+    comment: 'Benoit Pluquet'
+    groups:
+      - sales
+      - users
+    password: $6$0oeMiI/eY.sHpWqi$5DdDM7ruC1RjxHbOJHQVqv50cyIplinKERqM6hOaQ9awCR.NhgV9drZ36CtZs9ARm9/0/RuZ6FUJm5Kuo7yfq1
+  - name: anc
+    comment: 'An Coppens'
+    groups:
+      - technical
+      - users
+    password: $6$KIP.c8Fe6HJnLhyv$XYDuu48b0XNUKc71TOyFlL3l694NRWRKtBvK9CmpdrEhjaAY9sXzBOvjFK6bzI4pX2vXrtxcde3YvNa7GXsYF.
+  - name: elenaa
+    comment: 'Elena Andreev'
+    groups:
+      - management
+      - users
+    password: $6$wGF8mref5Vi4tbIO$655Z.NMV3ylyBC15GSpxV3tnx2VFXpBOylWcssfZd4MgAYTaEC9Ggfb1Sp6eUeP8U2YelKt4D43hTv2BNMGwX0
+  - name: evyt
+    comment: 'Evy Tileman'
+    groups:
+      - technical
+      - users
+    password: $6$wxnTCoe3ODzhxjUN$owfm4ZF2CBcE/hLRldPEFP6nWTqWmdP.Rf8HHh215wpSqXfzJR7REVyjEt3Btcjkd6IF095DybPqb./HMOLuA1
+  - name: christophev
+    comment: 'Christophe Van der Meersche'
+    groups:
+      - it
+      - users
+    password: $6$MJ7YNVUs9BAZz0ZN$V1jIB0ezwShFaZBAS29dGBGLLiDiHZCe0TXvzQslEYd8w.OiiuKwWs85UELVdnm6i15dp6CjZHG63D9wyIOjC.
+    shell: /bin/bash
+  - name: stefaanv
+    comment: 'Stefaan Vernimmen'
+    groups:
+      - technical
+      - users
+    password: $6$q5Vb.RljpUneAnPZ$kFxaqdmaGqE/iGSMvmzgjHsOpUHrfUOKrykWKrDJG518fJc81icVifJFC7UVTSnbi7NoxhrP8u9CykvCItNAw.
+  - name: ebu
+    comment: 'Ebu Bekir Tinastepe'
+    groups:
+      - it
+      - users
+      - wheel
+    password: $6$Z8exNH10xzfGtI6o$RXhe.LdyR1cyP5tr1VtblEMmBjhSRob6nHcf/SYsc3FcUMPh5feSC..lxnj1A9N./QdIeS25h6p2K9PyWk7XB.
+    shell: /bin/bash
+
+samba_users:
+  - name: stevenh
+    password: stevenh
+  - name: stevenv
+    password: stevenv
+  - name: leend
+    password: leend
+  - name: svena
+    password: svena
+  - name: nehirb
+    password: nehirb
+  - name: alexanderd
+    password: alexanderd
+  - name: krisv
+    password: krisv
+  - name: benoitp
+    password: benoitp
+  - name: anc
+    password: anc
+  - name: elenaa
+    password: elenaa
+  - name: evyt
+    password: evyt
+  - name: christophev
+    password: christophev
+  - name: stefaanv
+    password: stefaanv
+  - name: ebu
+    password: ebutinastepe
+
+vsftpd_anonymous_enable: false
+vsftpd_listen: true
+vsftpd_local_enable: true
+vsftpd_local_root: /srv/shares/
