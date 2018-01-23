@@ -134,7 +134,7 @@ rhbase_users:
       - it
       - users
       - wheel
-    password: $6$Z8exNH10xzfGtI6o$RXhe.LdyR1cyP5tr1VtblEMmBjhSRob6nHcf/SYsc3FcUMPh5feSC..lxnj1A9N./QdIeS25h6p2K9PyWk7XB.
+    password: $1$2QQMxzMH$Hhzy/owIm8p2AVy309oSB/
     shell: /bin/bash
 
 samba_users:
