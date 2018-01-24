@@ -91,7 +91,7 @@ Router: `sudo loadkeys fr`.
 ## End result
 Alle testen zijn geslaagd!
 Uitgevoerd met commando `/usr/local/bin/acceptance-tests`
-
+![Testuitslag troubleshoot](https://github.com/EbuTinastepe/elnx-sme/blob/master/report/img/testuitslag.PNG)
 
 ## Resources
 
