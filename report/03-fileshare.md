@@ -26,8 +26,7 @@ Als we binnen server pr011 de commando `sudo /vagrant/test/runbats.sh` uitvoeren
   netmask: 255.255.0.0
 ```
 2. We maken de server aan met de commando `vagrant up`.
-3. We maken een bestand 'pr011.yml' aan in de map host_vars.
-4. We passen site.yml aan en geven de rollen mee voor de configuratie van de server.
+3. We passen site.yml aan en geven de rollen mee voor de configuratie van de server.
 ```Yaml
 - hosts: pr011
   become: true
@@ -36,8 +35,9 @@ Als we binnen server pr011 de commando `sudo /vagrant/test/runbats.sh` uitvoeren
     - bertvv.samba
     - bertvv.vsftpd
 ```
-5. We installeren de rollen bertvv.samba en bertvv.vsftpd met behulp van de commando `scripts/role-deps.sh`.
-6. We voeren `vagrant provision pr011` uit zodat de rollen geïnstalleerd worden op de server.
+4. We installeren de rollen bertvv.samba en bertvv.vsftpd met behulp van de commando `scripts/role-deps.sh`.
+5. We voeren `vagrant provision pr011` uit zodat de rollen geïnstalleerd worden op de server.
+6. We maken een bestand 'pr011.yml' aan in de map host_vars.
 7. Nu gaan we de samba fileserver configureren. Dit doen we in het bestand 'pr011.yml' die we reeds hebben aangemaakt. (zie bestand voor code)
 8. Nadat we alles van samba hebben geconfigureerd, voeren we de commando `vagrant provision` uit. Hiermee zal de configuratie uitgevoerd worden.
 9. Nu moeten we de FTP server nog configureren. We voegen deze code toe in het bestand 'pr011.yml':
