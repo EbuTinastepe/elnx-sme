@@ -31,6 +31,8 @@ Simple workflow for a personal project without other contributors:
 | Shell-script runnen (testen)                 |  'sudo /vagrant/test/runbats.sh' |
 | Installeren van een base (Ansible)           |  'ansible-galaxy install BASE' |
 | Commando als vagrant ssh niet werkt          |  'vagrant_prefer_system_bin=1 vagrant ssh HOST' |
+| Script commando voor installeren van role(s) |  'scripts/role-deps.sh' |
+| Installeren van een plugin met vagrant       |  'vagrant plugin install PLUGIN' |
 
 ## Checklist network configuration
 

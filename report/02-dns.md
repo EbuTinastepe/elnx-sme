@@ -135,6 +135,14 @@ Running test /vagrant/test/pu002/slavedns.bats
 
 14 tests, 0 failures
 ```
+### Dig test
+#### DNS server
+
+![digdns](https://github.com/EbuTinastepe/elnx-sme/blob/master/report/img/digdns.PNG)
+
+#### Slave DNS server
+
+![digsmavedns](https://github.com/EbuTinastepe/elnx-sme/blob/master/report/img/digslavedns.PNG)
 
 ## Resources
 
