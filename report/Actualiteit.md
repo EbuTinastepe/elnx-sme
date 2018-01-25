@@ -51,7 +51,7 @@ fail2ban_wordress_jail_config:
 2. Na enkele verkeerde pogingen zou de server niet meer bereikbaar moeten worden.
 ![failure](https://github.com/EbuTinastepe/elnx-sme/blob/master/report/img/failure.PNG)
 3. Server onbereikbaar na banip.
-![failure](https://github.com/EbuTinastepe/elnx-sme/blob/master/report/img/failure.PNG)
+![onbereikbaar](https://github.com/EbuTinastepe/elnx-sme/blob/master/report/img/onbereikbaar.PNG)
 4. Server opnieuw bereikbaar na unbanip!
 ![terugbereikbaar](https://github.com/EbuTinastepe/elnx-sme/blob/master/report/img/terugbereikbaar.PNG)
 
