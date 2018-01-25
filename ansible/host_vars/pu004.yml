@@ -21,3 +21,16 @@ wordpress_password: M@ria
 #Certificaten
 httpd_SSLCertificateFile: /etc/pki/tls/certs/ca.crt
 httpd_SSLCertificateKeyFile: /etc/pki/tls/private/ca.key
+
+
+#Fail2Ban
+fail2ban_wordress_plugin_name: wp-fail2ban
+fail2ban_wordress_plugin_version: ""
+fail2ban_wordress_plugins_dir: /usr/share/wordpress/wp-content/plugins/
+fail2ban_wordress_filter_file: /filters.d/wordpress-hard.conf
+fail2ban_wordress_mu_plugins_dir: false
+fail2ban_wordress_jail_config:
+  logpath: /var/log/messages
+  maxretry: 5
+  bantime: 21600
+  findtime: 86400
