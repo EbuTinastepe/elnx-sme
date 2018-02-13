@@ -20,9 +20,19 @@ W9:
 - LAMP, DNS klaar
 - Beginnen met Samba
 
+Eindevaluatie
+
+- Acceptatietests fileserver ok
+- Werkstation:
+    - IP-config: ok
+    - Web: lokaal + internet ok
+    - FTP via FQDN: ok
+    - Samba via NetBIOS: ok
+- Prima!
+
 ### Eindbeoordeling
 
-O1: <BEOORDELING>
+O1: Deskundig
 
 ## Troubleshooting
 
@@ -49,28 +59,39 @@ Beoordeling: nog niet bekwaam
 
 ### Derde troubleshooting-opdracht
 
+Ok!
 
 ### Eindbeoordeling
 
-O2: <BEOORDELING>
+O2: Bekwaam
 
 ## Opdracht Actualiteit
 
+- Fail2ban op Wordpress, verwerkt in playbook
+- Tijdens de demo is de ban niet getriggerd door >5 verkeerde logins
+- Manuele ban vanaf command line uitgevoerd
+
 ### Eindbeoordeling
 
-O3: <BEOORDELING>
+O3: Bekwaam
 
 ## Rapportering
 
 ### Laboverslagen
 
-R1: <BEOORDELING>
+In verslagen van labo's 1, 2 en 3 is bij de resultaten enkel een transcript van de acceptatietests gegeven. Daarmee is niet aangetoond dat de services ook beschikbaar zijn over het netwerk.
+
+R1: Bekwaam
 
 ### Demonstraties
 
-R2: <BEOORDELING>
+Prima.
+
+R2: Deskundig
 
 ### Cheat sheet
 
-R3: <BEOORDELING>
+- Af en toe in de loop van het semester bijgewerkt
+
+R3: Bekwaam
 
